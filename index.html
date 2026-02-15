@@ -1,77 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Jeevitha's Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jeevi | Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f9fafc;
+    color: #333;
+}
+
+/* ===== NAVBAR ===== */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+header h1 {
+    color: #2563eb;
+}
+
+nav a {
+    text-decoration: none;
+    margin-left: 30px;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+/* ===== SECTIONS ===== */
+section {
+    padding: 120px 80px;
+    min-height: 100vh;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+/* ===== HERO ===== */
+#hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#hero h2 {
+    font-size: 48px;
+}
+
+#hero p {
+    margin: 20px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1e40af;
+}
+
+/* ===== ABOUT ===== */
+#about img {
+    border-radius: 50%;
+    margin: 20px 0;
+}
+
+/* ===== SKILLS ===== */
+#skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#skills li {
+    background: #2563eb;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+/* ===== PROJECT CARDS ===== */
+#projects {
+    background: #f1f5f9;
+}
+
+.project-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: white;
+    padding: 25px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+/* ===== CERTIFICATIONS ===== */
+#certifications ul {
+    list-style: none;
+}
+
+#certifications li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #e0e7ff;
+    border-left: 4px solid #2563eb;
+}
+
+/* ===== CONTACT ===== */
+#contact {
+    background: #111827;
+    color: white;
+}
+
+#contact h2 {
+    color: white;
+}
+
+#contact p {
+    margin-bottom: 10px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0f172a;
+    color: white;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width: 768px) {
+    header {
+        padding: 15px 30px;
+    }
+
+    section {
+        padding: 100px 30px;
+    }
+
+    #hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-container {
+        justify-content: center;
+    }
+}
+</style>
 </head>
+
 <body>
 
-    <header>
-        <h1>Jeevi</h1>
-        <nav>
-            <a href="about">About</a>
-            <a href="projects">Projects</a>
-            <a href="certifications">Certifications</a>
-            <a href="skills">Skills</a>
-            <a href="contact">Contact</a>
-        </nav>
-    </header>
+<header>
+    <h1>Jeevi</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-    <section id="hero">
-        <h2>Hello, I'm Jeevitha Selvaraj</h2>
-        <p>IT Student | Java & DSA Learner | Future Web Developer</p>
-        <button>View My Work</button>
-    </section>
+<section id="hero">
+    <div>
+        <h2>Hello, I'm Jeevi 👋</h2>
+        <p>IT Student | Java & DSA Enthusiast | Future Web Developer</p>
+        <button onclick="location.href='#projects'">View Projects</button>
+    </div>
+</section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <img src="profile.jpg" alt="Profile Photo" width="200">
-        <p>
-            I am an IT student passionate about Java, Data Structures & Algorithms,
-            and Web Development using React. I love building clean and modern websites.
-        </p>
-    </section>
+<section id="about">
+    <h2>About Me</h2>
+    <img src="profile.jpg" width="180" alt="Profile">
+    <p>
+        I am passionate about building real-world applications using Java and Web technologies.
+        I enjoy solving DSA problems and continuously improving my development skills.
+    </p>
+</section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Java</li>
-            <li>Data Structures & Algorithms</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>React (Learning)</li>
-        </ul>
-    </section>
+<section id="skills">
+    <h2>Skills</h2>
+    <ul>
+        <li>Java</li>
+        <li>DSA</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+    </ul>
+</section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-
-        <div>
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="project-container">
+        <div class="project-card">
             <h3>Portfolio Website</h3>
-            <p>Personal responsive portfolio built using HTML and CSS.</p>
+            <p>Modern responsive portfolio built using HTML & CSS.</p>
         </div>
 
-        <div>
-            <h3>Java Mini Project</h3>
-            <p>Console-based application using Java and OOP concepts.</p>
+        <div class="project-card">
+            <h3>Java Application</h3>
+            <p>Console-based project using Java and OOP principles.</p>
         </div>
-    </section>
 
-    <section id="certifications">
-        <h2>Certifications</h2>
-        <ul>
-            <li>Java Programming Certificate</li>
-            <li>Web Development Workshop</li>
-        </ul>
-    </section>
+        <div class="project-card">
+            <h3>Web App</h3>
+            <p>Simple front-end application using JavaScript.</p>
+        </div>
+    </div>
+</section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: jeevithaselvaraj.9345@gmail.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/jeevitha-selvaraj/">linkedin.com/in/jeevitha-selvaraj</a></p>
-        <p>GitHub: <a href="https://github.com/Jeevitha9345">github.com/Jeevitha9345</a></p>
-    </section>
+<section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+        <li>Java Programming Certification</li>
+        <li>Web Development Workshop</li>
+        <li>DSA Course Completion</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: jeevithaselvaraj.9345@gmail.com</p>
+    <p>GitHub: </p>
+    <p>LinkedIn: </p>
+</section>
+
+<footer>
+    © 2026 Jeevi. All Rights Reserved.
+</footer>
 
 </body>
 </html>
