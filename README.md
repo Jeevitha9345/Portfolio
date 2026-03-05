@@ -7,3 +7,4 @@ Updated my portfolio using css and javascript
 
 created a project div 
 need to update the complete details about me
+added photos and changed the background for unique design
